@@ -15,6 +15,8 @@ This is a data visualization project built using NASA’s Near-Earth Object API.
 2. Install dependencies
    
 ## Outputs
-4. ![dashboard op1](https://github.com/user-attachments/assets/5510353c-cee3-45b3-9525-61c9007fb7c5)
-5. ![ip result1](https://github.com/user-attachments/assets/f7d1a583-f6e6-417d-a305-3a81b404e42d)
+[streamlit-nasa_asteroid_dashboard-2025-05-20-22-05-17.webm](https://github.com/user-attachments/assets/3cf911d8-64c7-4059-a30a-0119a6f3f932)
+![dashboard op1](https://github.com/user-attachments/assets/5ba50db0-0e4e-4745-a77a-d599965be686)
+![ip result1](https://github.com/user-attachments/assets/05b7b7ff-8945-4ec3-b51d-206d24c11a3c)
+
 
