@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def plot_asteroid_data(df):
+    plt.figure(figsize=(18, 5))
+    
+    # 1. Bar Chart: Top 10 Largest Asteroids (diameter_max_m)
+    plt.subplot(1, 3, 1)
+    sns.barplot(
+        x='name',
+        y='diameter_max_m',
+        data=df.sort_values(by='diameter_max_m', ascending=False).head(10),
+        palette='viridis'
+    )
+    plt.title('Top 10 Largest Asteroids (meters)')
+    plt.xticks(rotation=45, ha='right')
+    plt.ylabel('Max Diameter (m)')
+    plt.xlabel('Asteroid Name')
+    
+    # 2. Scatter Plot: Velocity vs Distance
+    plt.subplot(1, 3, 2)
+    sns.scatterplot(
+        x='distance_km',
+        y='velocity_kmh',
+        size='diameter_max_m',
+        sizes=(20, 200),
+        data=df,
+        alpha=0.7,
+        legend=False,
+        color='orange'
+    )
+    plt.title('Asteroid Velocity vs Distance from Earth')
+    plt.xlabel('Distance (km)')
+    plt.ylabel('Velocity (km/h)')
+    
+    # 3. Line Chart: Number of Asteroids Approaching Each Day
+    daily_counts = df.groupby('close_approach_date').size().reset_index(name='count')
+    plt.subplot(1, 3, 3)
+    sns.lineplot(x='close_approach_date', y='count', data=daily_counts, marker='o', color='green')
+    plt.title('Daily Asteroid Approaches')
+    plt.xlabel('Date')
+    plt.ylabel('Count')
+    plt.xticks(rotation=45)
+    
+    plt.tight_layout()
+    plt.show()
