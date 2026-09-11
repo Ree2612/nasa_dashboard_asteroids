@@ -7,7 +7,7 @@ from datetime import date, timedelta
 
 # Streamlit UI
 st.set_page_config(page_title="NASA Asteroid Dashboard", layout="wide")
-st.title("🌠 NASA Asteroid Dashboard")
+st.title(" NASA Asteroid Dashboard")
 
 # --- Date Inputs ---
 today = date.today()
@@ -15,7 +15,7 @@ start_date = st.date_input("Start Date", today - timedelta(days=3))
 end_date = st.date_input("End Date", today)
 
 if (end_date - start_date).days > 7:
-    st.warning("⚠️ Date range should be 7 days or less (NASA API limit).")
+    st.warning(" Date range should be 7 days or less (NASA API limit).")
     st.stop()
 
 # --- NASA API Setup ---
