@@ -19,7 +19,7 @@ if (end_date - start_date).days > 7:
     st.stop()
 
 # --- NASA API Setup ---
-API_KEY = "jiSCFqcXyySppVDYC6drZaySj2F1ycSZt7xMDMnh"
+API_KEY = "YOUR_API_KEY"
 url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={start_date}&end_date={end_date}&api_key={API_KEY}"
 
 # --- Fetch Data ---
