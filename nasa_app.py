@@ -47,11 +47,11 @@ df['close_approach_date'] = pd.to_datetime(df['close_approach_date'])
 st.success(f"Fetched {len(df)} asteroids between {start_date} and {end_date}")
 
 # --- Show Table ---
-with st.expander("📋 View Raw Data Table"):
+with st.expander(" View Raw Data Table"):
     st.dataframe(df)
 
 # --- Visualizations ---
-st.subheader("🔍 Asteroid Insights")
+st.subheader(" Asteroid Insights")
 
 # 1. Top 10 Largest Asteroids
 fig1, ax1 = plt.subplots(figsize=(10, 5))
